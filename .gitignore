@@ -1,0 +1,6 @@
+/HelperBot
+/NewHelper/node_modules
+/NewHelper/web
+/NewHelper/temp
+/NewHelper/config/db.json
+/NewHelper/.env

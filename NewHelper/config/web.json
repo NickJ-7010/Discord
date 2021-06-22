@@ -1,0 +1,6 @@
+{
+    "ports": {
+        "webserver": 5050,
+        "websocket": 7010
+    }
+}

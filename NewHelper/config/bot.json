@@ -1,0 +1,24 @@
+{
+    "emojis": {
+        "success": ":white_check_mark:",
+        "failure": ":x:",
+        "play": ":arrow_forward:",
+        "pause": ":pause_button:",
+        "next_track": ":track_next:",
+        "previous_track": ":track_previous:",
+        "loop": ":repeat:",
+        "seek": ":fast_forward:",
+        "shuffle": ":twisted_rightwards_arrows:",
+        "queue": ":page_facing_up:",
+        "add_queue": ":pencil:",
+        "search": ":mag_right:",
+        "volume": ":loud_sound:",
+        "play-pause": ":play_pause:"
+    },
+    "colors": {
+        "error": "FF3737",
+        "success": "7DFF64",
+        "event": "64C8FF",
+        "misc": "FFFF64"
+    }
+}
