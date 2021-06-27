@@ -14,7 +14,7 @@
     "chalk": "^4.1.1",
     "console-input": "^1.0.2",
     "discord-player": "^4.1.0",
-    "discord.js": "^13.0.0-dev.1f8f3ab0f8dbd346154bbfa14a98726b8df25d57",
+    "discord.js": "^13.0.0-dev.6cebeae15e97e29acbdaf95bc7b17a1e346a2c34",
     "dotenv": "^8.6.0",
     "express": "^4.17.1",
     "ffmpeg": "0.0.4",

@@ -1,4 +1,4 @@
-const { HelperPlayer } = require('../config/var.js');
+const { HelperPlayer } = require('../../config/var.js');
 module.exports = {
     execute() {
         HelperPlayer.on('searchResults', (message, query, tracks) => {

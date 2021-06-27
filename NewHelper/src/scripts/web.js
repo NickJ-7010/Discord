@@ -1,7 +1,7 @@
-const { webServer, bodyParser, print, getIP, webConfig } = require('../config/var.js');
+const { webServer, bodyParser, print, getIP, webConfig } = require('../../config/var.js');
 module.exports = {
     execute () {
-        setTimeout(async () => { webServer.listen(webConfig.ports.webserver, async () => { var ip = await getIP(); print(`Webserver is open on ${ip}:5050`) }); }, 1000);
+        webServer.listen(webConfig.ports.webserver, async () => { var ip = await getIP(); print(`Webserver is open on ${ip}:5050`) });
         webServer.use(bodyParser.urlencoded({ extended: true }));
         webServer.get('/', async (req, res) => {
             var ip = await getIP();
@@ -61,5 +61,6 @@ module.exports = {
             if (!fs.existsSync(`./web${filePath}.html`)) { res.sendFile(`web/404.html`, { root: '.' }); return; };
             res.sendFile(`web${filePath}.html`, { root: '.' });
         });
+        return 'WebServer Has Loaded!';
     }
 };

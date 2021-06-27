@@ -1,4 +1,4 @@
-const { luaS, getIP, print } = require('../config/var.js');
+const { luaS, getIP, print } = require('../../config/var.js');
 module.exports = {
     execute() {
         luaS.on('connection', async (ws, req) => {
