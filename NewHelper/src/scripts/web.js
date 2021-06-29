@@ -5,7 +5,7 @@ module.exports = {
         webServer.use(bodyParser.urlencoded({ extended: true }));
         webServer.get('/', async (req, res) => {
             var ip = await getIP();
-            res.redirect(`http://${ip}:${port}/homepage`);
+            res.redirect(`http://${ip}:${webConfig.ports.webserver}/homepage`);
         });
         webServer.post('/*', (req, res) => {
             switch (req.originalUrl) {

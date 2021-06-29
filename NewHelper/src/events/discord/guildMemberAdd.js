@@ -5,9 +5,5 @@ module.exports = async (member) => {
     } else {
 
     };
-    for (i = 0; i < member.guild.roles.cache.size; i++) {
-        if (member.guild.roles.cache.array()[i].name.toLocaleLowerCase() == 'member') {
-            member.roles.add(member.guild.roles.cache.array()[i]);
-        };
-    };
+    member.user.roles.add(member.guild.roles.cache.get(db.getData(`/guilds/${member.guild.id}/member_role_id`)));
 };

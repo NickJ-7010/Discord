@@ -1,6 +1,7 @@
 {
     "ports": {
         "webserver": 5050,
-        "websocket": 7010
+        "websocket": 7010,
+        "bedrock_ws": 12000
     }
 }

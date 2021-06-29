@@ -14,17 +14,20 @@ const minecraft = require('minecraft-server-util');
 const chalk = require('chalk');
 const ipify = require('ipify');
 const canvas = require('canvas');
+const uuid = require('uuid')
+const bWss = new webSocket.Server({ port: webConfig.ports.bedrock_ws });
+var bss = {  };
 const print = console.log;
 const commands = new Discord.Collection();
 const serverRCON = new minecraft.RCON('mc-server', { port: 25425, enableSRV: true, timeout: 5000, password: env.RCONpassword });
-const HelperBot = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES'], partials: ['MESSAGE', 'CHANNEL', 'REACTION', 'USER', 'GUILD_MEMBER'] });
+const HelperBot = new Discord.Client({ intents: Discord.Intents.ALL, partials: ['MESSAGE', 'CHANNEL', 'REACTION', 'USER', 'GUILD_MEMBER'] });
 const HelperHook = new Discord.WebhookClient('837810167445717002', 'x5R47Ql_aQDzjwCos3n7IDmgRatEsTTad_cH1r6BSQ_SpkiAlw6_WJSY0LxqvrLAOoHd');
 const HelperPlayer = new Player(HelperBot);
-const functions = {  };
+const functions = { };
 const webServer = express();
 const luaS = new webSocket.Server({ port: webConfig.ports.websocket });
 
-module.exports = { env, Discord, express, bodyParser, fetch, fs, Player, webSocket, functions, botConfig, webConfig, db, minecraft, chalk, ipify, canvas, print, commands, serverRCON, HelperBot, HelperHook, HelperPlayer, webServer, luaS,
+module.exports = { env, Discord, express, bodyParser, fetch, fs, Player, webSocket, functions, botConfig, webConfig, db, minecraft, chalk, ipify, canvas, uuid, bWss, bss, print, commands, serverRCON, HelperBot, HelperHook, HelperPlayer, webServer, luaS,
     async addCommands() {
         addCommand({ name: "test", description: "test for things", options: [] }, false, '817906100262141982');
         addCommand({ name: "ping", description: "replys with the bots ping" }, false, '817906100262141982');
